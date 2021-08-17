@@ -1,6 +1,6 @@
-// if (window.location.protocol === "http:"){
-//     alert(" This functionality require a secure URL(https)");
-// }
+if (window.location.protocol === "http:"){
+    alert(" This functionality require a secure URL(https)");
+}
 
 const ulResults = document.getElementById("results");
 const btReq = document.getElementById("btReq");
@@ -53,7 +53,6 @@ function renderResults(contacts){
    
    const strContacts = JSON.stringify(contacts, null, 2);
    console.log( strContacts);
-
 }
 
 
