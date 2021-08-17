@@ -34,20 +34,48 @@ navigator.mediaDevices.getUserMedia(constraintObj)
 .then(function(mediaStreamObj) {
    
     //add listeners for saving video/audio
-    let start = document.getElementById('btnStart');
-    let stop = document.getElementById('btnStop');
+
     let vidSave = document.getElementById('vid2');
     let mediaRecorder = new MediaRecorder(mediaStreamObj);
     let chunks = [];
+
+    $(document).ready(function() {
     
-    start.addEventListener('click', (ev)=>{
-        mediaRecorder.start();
-        console.log(mediaRecorder.state);
-    })
-    stop.addEventListener('click', (ev)=>{
-        mediaRecorder.stop();
-        console.log(mediaRecorder.state);
-    });
+        $("#audio_setting3").change(function() {
+          if (this.checked ) {
+            $("#icon_on").css({
+              opacity: 1,
+              left: "198px"
+            });
+            $("#icon_off").css({
+              opacity: 0,
+              left: "198px"
+            });
+            $("#result3").html("ON");
+
+            mediaRecorder.start();
+            console.log(mediaRecorder.state);
+                
+          } else {
+            $("#icon_on").css({
+              opacity: 0,
+              left: "158px"
+            });
+            $("#icon_off").css({
+              opacity: 1,
+              left: "158px"
+            });
+            $("#result3").html("OFF");
+            mediaRecorder.stop();
+            console.log(mediaRecorder.state);
+        
+          }
+        });
+        
+        
+      });
+
+
     mediaRecorder.ondataavailable = function(ev) {
         chunks.push(ev.data);
     }

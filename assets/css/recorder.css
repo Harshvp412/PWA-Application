@@ -7,7 +7,7 @@
         background: lavender !important;
     }
     .user_card {
-        height: 450px;
+        height: 550px;
         width: 350px;
         margin-top: auto;
         margin-bottom: auto;
@@ -40,7 +40,7 @@
         border: 2px solid white;
     }
     .form_container {
-        margin-top: 100px;
+        margin-top: 10px;
     }
     .login_btn {
         width: 200px;
@@ -68,3 +68,4 @@
     .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
         background-color: #c0392b !important;
     }
+    

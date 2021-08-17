@@ -1,0 +1,145 @@
+.container1, .container2, .container3 {
+    position: relative;
+    width: 300px;
+    height: 50px;
+
+
+  }
+  
+  .hidden {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
+  
+  switch {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 52px;
+    left: 100px;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    right: 0px;
+    bottom: 0px;
+    background: #fff;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0 0 3px gray;
+  }
+ 
+  #audio_setting:checked + .slider,
+  #audio_setting2:checked + .slider,
+  #audio_setting3:checked + .slider
+  {
+    background: #00bcd4;  
+  }
+  
+  #audio_setting:not(:checked) + .slider,
+  #audio_setting2:not(:checked) + .slider,
+  #audio_setting3:not(:checked) + .slider {
+    background: gray;
+  }
+  
+  #audio_setting:not(:checked) + .slider:before,
+  #audio_setting2:not(:checked) + .slider:before,
+  #audio_setting3:not(:checked) + .slider:before {
+    right: 40px;
+  }
+  
+  label {
+    position: absolute; 
+  }
+  
+  .material-icons {
+    font-size: 46px;
+  }
+  
+  .container1 .audio_icon {
+    position: absolute;
+    top: 48px;
+  }
+  
+  .container1 .audio_icon:hover {
+    color: salmon;
+  }
+  
+  .container1 #audio_icon_off {
+    left: 45px;
+  }
+  
+  .container1 #audio_icon_on {
+    left: 190px;
+  }
+  
+  p {
+    position: absolute;
+    top: 135px;
+    left: 45px;
+    font-size: 2em;
+  }
+  
+  .container2 .slider,
+  .container3 .slider {
+    left: 150px;
+  }
+  
+  .container2 .slider:before,
+  .container3 .slider:before {
+    line-height: 40px;
+    text-align: center;  
+  }
+  
+  .container2 #audio_setting2:checked + .slider:before {
+    content: "ON";
+  }
+  
+  .container2 #audio_setting2:not(:checked) + .slider:before {
+    content: "OFF";
+  }
+  
+  .container2 .sound_label,
+  .container3 .sound_label {
+    position: absolute;
+    top: 58px;
+    left: 50px;
+    font-size: 1.5em;
+  }
+  
+  .container3 .audio_icon {
+    position: absolute;
+    top: 58px;
+    -webkit-transition:  .4s;
+    transition:  .4s;
+  }
+  
+  .container3 .material-icons {
+    font-size: 24px;
+  }
+  
+  .container3 #icon_on {
+    left: 198px;
+  }
+  
+  .container3 #icon_off {
+    left: 158px;
+    opacity: 0;
+  }
