@@ -45,7 +45,7 @@ function renderResults(contacts){
              lines.push(`<b>Icon:</b> <img src="${imgURL}">`); 
          });   
       }
-      lines.push(`<b>Raw:</b> <code> ${JSON.stringify(contact)}</code> `); 
+    //   lines.push(`<b>Raw:</b> <code> ${JSON.stringify(contact)}</code> `); 
       const li = document.createElement('li');
       li.innerHTML = lines.join('<br>');
       ulResults.appendChild(li);       
