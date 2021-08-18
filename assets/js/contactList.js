@@ -48,6 +48,11 @@ function renderResults(contacts){
     //   lines.push(`<b>Raw:</b> <code> ${JSON.stringify(contact)}</code> `); 
       const li = document.createElement('li');
       li.innerHTML = lines.join('<br>');
+      $(li).css({
+        color: "black",
+        left: "15px",
+        size:"1em"
+      });
       ulResults.appendChild(li);       
    });
    
